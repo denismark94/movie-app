@@ -1,0 +1,129 @@
+body {
+    margin: 0 auto;
+    background-color: #22254b;
+    font-family: Inter;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#44456b;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+header > img {
+    margin-right: 190px;
+}
+
+header > form {
+    display: flex;
+    flex-direction: row;
+}
+
+.search {
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid antiquewhite;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+main {
+    margin: 20px auto 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 10px;
+    overflow-y: hidden;
+}
+
+.poster {
+    width: 300px;
+    height: 450px;
+}
+
+.info {
+    background-color: #44456b;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.title {
+    padding: 5px;
+    color: antiquewhite;
+    text-align: center;
+    font-size: 1em;
+}
+
+.mark {
+    margin: 30px;
+    padding: 5px;
+    background-color: #22254b;
+    color: antiquewhite;
+    height: 30%;
+    font-size: 20px;
+    border-radius: 20%;
+}
+
+.overview {
+    position: absolute;
+    background-color: antiquewhite;
+    padding: 20px;
+    bottom: 0;
+    transition: 1s;
+    max-height: 510px;
+    overflow-y: auto;
+}
+
+.overview.hidden {
+    bottom: -550px;
+    transition: 1s;
+}
+
+.overview > h3 {
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#44456b;
+}
+
+.year {
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+.github {
+    padding: 20px;
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    src: url("assets/fonts/Inter-Regular.ttf");
+}
