@@ -5,7 +5,7 @@ let domain = 'https://image.tmdb.org/t/p/w1280'
 async function getData() {
     let res;
     if (window.location.search) {
-        res = await fetch(searchUrl.replace('VALUE',window.location.search.split('=')[1]))
+        res = await fetch(searchUrl.replace('VALUE',window.location.search.split('=')[1]));
     } else {
         res = await fetch(url);
     }
@@ -47,7 +47,6 @@ async function showData() {
         container.append(poster);
         container.append(info);
         container.append(overview);
-        console.log('done')
         document.querySelector('.wrapper').append(container);
 
         container.addEventListener('mouseenter',()=>{container.querySelector('.overview').classList.remove('hidden')});
@@ -66,4 +65,9 @@ showData();
 form.addEventListener('submit',()=>{
     value = form.search.value;
     window.location.href += value;
+})
+
+window.addEventListener('load',()=>{
+    if (window.location.search)
+    form.search.value = window.location.search.split('=')[1];
 })
